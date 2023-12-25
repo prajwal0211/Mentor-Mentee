@@ -1,0 +1,25 @@
+.custom-dropdown .dropdown-toggle::after {
+  display: none;
+}
+.custom-dropdown .dropdown-menu {
+  background-color: #192042;
+}
+
+.custom-dropdown .active-dropdown-item {
+  background-color: #084ca4;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: #084ca4;
+}
+
+$primary: #084ca4;
+$secondary: #d9d9d9;
+$success: green;
+$info: #03feeb;
+$warning: #e48c44;
+$danger: red;
+$light: white;
+$dark: #192042;
+
+@import "bootstrap/scss/bootstrap";
