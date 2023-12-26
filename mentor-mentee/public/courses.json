@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "courseName": "Web Development",
+    "issuerName": "Coding Academy",
+    "issueDate": "2023-01-01",
+    "certificateUrl": "https://example.com/web-development-certificate",
+    "studentPrn": "12345"
+  },
+  {
+    "id": 2,
+    "courseName": "Data Science Fundamentals",
+    "issuerName": "Data Institute",
+    "issueDate": "2023-02-01",
+    "certificateUrl": "https://example.com/data-science-certificate",
+    "studentPrn": "12345"
+  },
+  {
+    "id": 3,
+    "courseName": "Mobile App Development",
+    "issuerName": "Tech Hub",
+    "issueDate": "2023-03-01",
+    "certificateUrl": "https://example.com/mobile-app-certificate",
+    "studentPrn": "67890"
+  },
+  {
+    "id": 4,
+    "courseName": "Machine Learning Masterclass",
+    "issuerName": "AI Academy",
+    "issueDate": "2023-04-01",
+    "certificateUrl": "https://example.com/machine-learning-certificate",
+    "studentPrn": "67890"
+  },
+  {
+    "id": 5,
+    "courseName": "Frontend Development Bootcamp",
+    "issuerName": "Code School",
+    "issueDate": "2023-05-01",
+    "certificateUrl": "https://example.com/frontend-bootcamp-certificate",
+    "studentPrn": "54321"
+  },
+  {
+    "id": 6,
+    "courseName": "Network Security Essentials",
+    "issuerName": "Security Institute",
+    "issueDate": "2023-06-01",
+    "certificateUrl": "https://example.com/network-security-certificate",
+    "studentPrn": "54321"
+  },
+  {
+    "id": 7,
+    "courseName": "Cloud Computing Basics",
+    "issuerName": "Cloud Academy",
+    "issueDate": "2023-07-01",
+    "certificateUrl": "https://example.com/cloud-computing-certificate",
+    "studentPrn": "98765"
+  },
+  {
+    "id": 8,
+    "courseName": "Software Engineering Principles",
+    "issuerName": "Code Engineering School",
+    "issueDate": "2023-08-01",
+    "certificateUrl": "https://example.com/software-engineering-certificate",
+    "studentPrn": "98765"
+  }
+]

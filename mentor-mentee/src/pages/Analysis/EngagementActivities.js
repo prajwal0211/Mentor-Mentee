@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 
 function EngagementActivities() {
   return (
-    <div style={{ margin: "0 20px" }}>
+    <div className="mx-4">
       <Row xs={1} md={2} className="g-4">
         <Col>
           <Card style={{ height: "300px" }}>

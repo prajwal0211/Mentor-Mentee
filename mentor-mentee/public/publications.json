@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "topicName": "Web Development Trends",
+    "authorName": "John Doe",
+    "documentUrl": "https://example.com/web-development-trends",
+    "studentPrn": "12345"
+  },
+  {
+    "id": 2,
+    "topicName": "Data Science in Practice",
+    "authorName": "Jane Smith",
+    "documentUrl": "https://example.com/data-science-in-practice",
+    "studentPrn": "12345"
+  },
+  {
+    "id": 3,
+    "topicName": "Mobile App Security",
+    "authorName": "Alan Johnson",
+    "documentUrl": "https://example.com/mobile-app-security",
+    "studentPrn": "67890"
+  },
+  {
+    "id": 4,
+    "topicName": "Advances in Machine Learning",
+    "authorName": "Emma White",
+    "documentUrl": "https://example.com/advances-in-machine-learning",
+    "studentPrn": "67890"
+  },
+  {
+    "id": 5,
+    "topicName": "Frontend Development Best Practices",
+    "authorName": "Chris Brown",
+    "documentUrl": "https://example.com/frontend-development-best-practices",
+    "studentPrn": "54321"
+  },
+  {
+    "id": 6,
+    "topicName": "Network Security Challenges",
+    "authorName": "Sophia Miller",
+    "documentUrl": "https://example.com/network-security-challenges",
+    "studentPrn": "54321"
+  },
+  {
+    "id": 7,
+    "topicName": "Introduction to Cloud Computing",
+    "authorName": "Ryan Wilson",
+    "documentUrl": "https://example.com/introduction-to-cloud-computing",
+    "studentPrn": "98765"
+  },
+  {
+    "id": 8,
+    "topicName": "Software Engineering Trends",
+    "authorName": "Olivia Davis",
+    "documentUrl": "https://example.com/software-engineering-trends",
+    "studentPrn": "98765"
+  }
+]

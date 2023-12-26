@@ -16,33 +16,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 
-const dummyStudentData = [
-  {
-    id: 1,
-    name: "Prajwal Waghmode",
-    prnNumber: "12345",
-  },
-  {
-    id: 2,
-    name: "Arya Angane",
-    prnNumber: "67890",
-  },
-  {
-    id: 3,
-    name: "Astha Thakur",
-    prnNumber: "54321",
-  },
-  {
-    id: 4,
-    name: "Akshija Shetty",
-    prnNumber: "98765",
-  },
-];
-
 function Analysis() {
   const { setActiveSection } = useActiveSection();
 
   const [searchInput, setSearchInput] = useState("");
+  const [originalStudentData, setOriginalStudentData] = useState([]);
   const [studentData, setStudentData] = useState(null);
 
   const engagementRef = useRef(null);
@@ -84,25 +62,44 @@ function Analysis() {
   );
 
   useEffect(() => {
-    Object.values(sectionRefs).forEach((ref) => {
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-    });
-
+    const setupObserver = () => {
+      Object.values(sectionRefs).forEach((ref) => {
+        if (ref.current) {
+          observer.observe(ref.current);
+        }
+      });
+    };
+    if (studentData) {
+      setupObserver();
+    }
     return () => {
       observer.disconnect();
     };
-  }, [sectionRefs, observer, setActiveSection]);
+  }, [sectionRefs, observer, setActiveSection, studentData]);
+
+  const fetchStudentData = async () => {
+    try {
+      const response = await fetch("/students.json");
+      const data = await response.json();
+      setOriginalStudentData(data);
+      setStudentData(null);
+    } catch (error) {
+      console.error("Error fetching student data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchStudentData();
+  }, []);
 
   const handleSearch = () => {
-    const matchingStudent = dummyStudentData.find(
+    const searchResult = originalStudentData.filter(
       (student) =>
         student.name.toLowerCase().includes(searchInput.toLowerCase()) ||
         student.prnNumber.includes(searchInput)
     );
 
-    setStudentData(matchingStudent || null);
+    setStudentData(searchResult[0] || null);
     setSearchInput("");
   };
 
@@ -174,11 +171,11 @@ function Analysis() {
           </div>
           <hr />
           <div ref={coursesRef} id="courses">
-            <Courses />
+            <Courses studentPrn={studentData.prnNumber} />
           </div>
           <hr />
           <div ref={publicationsRef} id="publications">
-            <Publications />
+            <Publications studentPrn={studentData.prnNumber} />
           </div>
         </>
       )}

@@ -11,7 +11,6 @@ function Marks() {
   const [isSubjectOptionsDisabled, setSubjectOptionsDisabled] = useState(true);
 
   const handleExamTypeChange = (selectedType) => {
-    console.log(selectedType);
     setExamType(selectedType);
 
     if (selectedType === "Theory") {
@@ -48,17 +47,15 @@ function Marks() {
   };
 
   const handleExamOptionChange = (selectedOption) => {
-    console.log(selectedOption);
     setSelectedExamOption(selectedOption);
   };
 
   const handleSubjectChange = (selectedSubject) => {
-    console.log(selectedSubject);
     setSelectedSubject(selectedSubject);
   };
 
   return (
-    <div style={{ margin: "0 20px" }}>
+    <div className="mx-4">
       <Form className="d-flex">
         <Form.Group controlId="examTypeDropdown" className="me-5">
           <Form.Label>Select Exam Type</Form.Label>
