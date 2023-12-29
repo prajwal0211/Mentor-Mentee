@@ -41,7 +41,8 @@ function Attendance() {
   return (
     <div className="mx-4">
       <Form className="d-flex">
-        <Form.Group controlId="attendanceTypeDropdown" className="me-5">
+        {/* <Form.Group htmlFor="attendanceTypeDropdown" className="me-5"> */}
+        <Form.Group htmlFor="attendanceTypeDropdown" className="me-5">
           <Form.Label>Select Attendance Type</Form.Label>
           <DropdownButton
             title={attendanceType || "Select Type"}
@@ -51,7 +52,8 @@ function Attendance() {
             <Dropdown.Item eventKey="Practical">Practical</Dropdown.Item>
           </DropdownButton>
         </Form.Group>
-        <Form.Group controlId="subjectDropdown" className="me-5">
+        {/* <Form.Group controlId="subjectDropdown" className="me-5"> */}
+        <Form.Group className="me-5">
           <Form.Label>Select Subject</Form.Label>
           <DropdownButton
             title={

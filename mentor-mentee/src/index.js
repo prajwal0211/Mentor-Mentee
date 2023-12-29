@@ -37,6 +37,7 @@ root.render(
             <Route path="" element={<Layout />}>
               <Route index path="dashboard" element={<MenteeDashboard />} />
               <Route path="details" element={<MenteeDetails />} />
+              <Route path="analysis" element={<Analysis />} />
               <Route path="career" element={<Career />} />
             </Route>
           </Route>

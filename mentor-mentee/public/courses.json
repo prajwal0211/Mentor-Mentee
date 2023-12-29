@@ -5,7 +5,8 @@
     "issuerName": "Coding Academy",
     "issueDate": "2023-01-01",
     "certificateUrl": "https://example.com/web-development-certificate",
-    "studentPrn": "12345"
+    "studentPrn": "12345",
+    "skills": ["HTML", "CSS", "JavaScript"]
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "issuerName": "Data Institute",
     "issueDate": "2023-02-01",
     "certificateUrl": "https://example.com/data-science-certificate",
-    "studentPrn": "12345"
+    "studentPrn": "12345",
+    "skills": ["Python", "Statistics", "Machine Learning"]
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "issuerName": "Tech Hub",
     "issueDate": "2023-03-01",
     "certificateUrl": "https://example.com/mobile-app-certificate",
-    "studentPrn": "67890"
+    "studentPrn": "67890",
+    "skills": ["React Native", "iOS", "Android"]
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "issuerName": "AI Academy",
     "issueDate": "2023-04-01",
     "certificateUrl": "https://example.com/machine-learning-certificate",
-    "studentPrn": "67890"
+    "studentPrn": "67890",
+    "skills": ["Machine Learning", "Deep Learning", "TensorFlow"]
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "issuerName": "Code School",
     "issueDate": "2023-05-01",
     "certificateUrl": "https://example.com/frontend-bootcamp-certificate",
-    "studentPrn": "54321"
+    "studentPrn": "54321",
+    "skills": ["HTML", "CSS", "JavaScript"]
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "issuerName": "Security Institute",
     "issueDate": "2023-06-01",
     "certificateUrl": "https://example.com/network-security-certificate",
-    "studentPrn": "54321"
+    "studentPrn": "54321",
+    "skills": ["Network Security", "Firewalls", "Encryption"]
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "issuerName": "Cloud Academy",
     "issueDate": "2023-07-01",
     "certificateUrl": "https://example.com/cloud-computing-certificate",
-    "studentPrn": "98765"
+    "studentPrn": "98765",
+    "skills": ["AWS", "Azure", "Google Cloud"]
   },
   {
     "id": 8,
@@ -61,6 +68,7 @@
     "issuerName": "Code Engineering School",
     "issueDate": "2023-08-01",
     "certificateUrl": "https://example.com/software-engineering-certificate",
-    "studentPrn": "98765"
+    "studentPrn": "98765",
+    "skills": ["Software Engineering", "Algorithms", "Design Patterns"]
   }
 ]

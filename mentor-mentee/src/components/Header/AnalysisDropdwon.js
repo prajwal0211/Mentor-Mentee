@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { isActive } from "./Header";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useActiveSection } from "../../ActiveSectionContext";
 
 function AnalysisDropdwon() {
@@ -9,6 +9,7 @@ function AnalysisDropdwon() {
   const [activeDropdownItem, setActiveDropdownItem] = useState(
     "engagement-activities"
   );
+  const navigate = useNavigate();
   const location = useLocation();
   const { activeSection } = useActiveSection();
 
@@ -34,17 +35,19 @@ function AnalysisDropdwon() {
   return (
     <NavDropdown
       title={
-        <NavLink
-          to="analysis"
+        <div
           className={`${
             isActive(location.pathname, "/analysis")
               ? "text-info text-decoration-none"
               : "text-secondary text-decoration-none"
           }`}
-          onClick={() => handleLinkClick("engagement-activities")}
+          onClick={() => {
+            handleLinkClick("engagement-activities");
+            navigate("analysis");
+          }}
         >
           Analysis
-        </NavLink>
+        </div>
       }
       id="basic-nav-dropdown"
       show={dropdownOpen}

@@ -57,7 +57,8 @@ function Marks() {
   return (
     <div className="mx-4">
       <Form className="d-flex">
-        <Form.Group controlId="examTypeDropdown" className="me-5">
+        {/* <Form.Group controlId="examTypeDropdown" className="me-5"> */}
+        <Form.Group className="me-5">
           <Form.Label>Select Exam Type</Form.Label>
           <DropdownButton
             title={examType || "Select Type"}
@@ -68,7 +69,8 @@ function Marks() {
           </DropdownButton>
         </Form.Group>
 
-        <Form.Group controlId="examOptionsDropdown" className="me-5">
+        {/* <Form.Group controlId="examOptionsDropdown" className="me-5"> */}
+        <Form.Group className="me-5">
           <Form.Label>Select Exam Options</Form.Label>
           <DropdownButton
             title={
@@ -89,7 +91,8 @@ function Marks() {
           </DropdownButton>
         </Form.Group>
 
-        <Form.Group controlId="subjectDropdown" className="me-5">
+        {/* <Form.Group controlId="subjectDropdown" className="me-5"> */}
+        <Form.Group className="me-5">
           <Form.Label>Select Subject</Form.Label>
           <DropdownButton
             title={
