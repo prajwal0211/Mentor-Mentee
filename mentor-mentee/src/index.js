@@ -16,7 +16,7 @@ import "./custom.scss";
 import { ActiveSectionProvider } from "./ActiveSectionContext.js";
 import MentorDashoboard from "./pages/DashBoard/MentorDashoboard.js";
 import MenteeDashboard from "./pages/DashBoard/MenteeDashboard.js";
-import MenteeDetails from "./pages/PersonalDetails/MenteeDetails.js";
+import SearchStudent from "./pages/PersonalDetails/MenteeDetails.js";
 import Career from "./pages/Career/Career.js";
 import Analysis from "./pages/Analysis/Analysis.js";
 import MyCenteredForm from './CenteredForm';
