@@ -57,7 +57,7 @@ const MentorView = ({ studentData, onSearch }) => {
       {studentData && (
         <>
           <div ref={engagementRef} id="engagement-activities">
-            <EngagementActivities />
+            <EngagementActivities studentPrn={studentData.prnNumber} />
           </div>
           <hr />
           <div ref={attendanceRef} id="attendance">

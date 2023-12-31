@@ -54,7 +54,7 @@ const MenteeView = ({ studentData }) => {
       {studentData && (
         <>
           <div ref={engagementRef} id="engagement-activities">
-            <EngagementActivities />
+            <EngagementActivities studentPrn={studentData.prnNumber} />
           </div>
           <hr />
           <div ref={attendanceRef} id="attendance">
@@ -65,11 +65,15 @@ const MenteeView = ({ studentData }) => {
             <Marks />
           </div>
           <hr />
-          <Courses studentPrn={studentData.prnNumber} userType="mentee" />
-          <div ref={coursesRef} id="courses"></div>
+          <div ref={coursesRef} id="courses">
+            <Courses studentPrn={studentData.prnNumber} userType="mentee" />
+          </div>
           <hr />
           <div ref={publicationsRef} id="publications">
-            <Publications studentPrn={studentData.prnNumber} />
+            <Publications
+              studentPrn={studentData.prnNumber}
+              userType="mentee"
+            />
           </div>
         </>
       )}

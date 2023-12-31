@@ -1,0 +1,184 @@
+[
+  {
+    "studentPrn": "12345",
+    "eventsOrganized": [
+      {
+        "id": 1,
+        "activityName": "Web Development Conference",
+        "description": "Organized a conference on the latest web development trends.",
+        "date": "2023-05-10"
+      },
+      {
+        "id": 2,
+        "activityName": "Data Science Workshop",
+        "description": "Hosted a workshop on practical applications of data science.",
+        "date": "2023-06-15"
+      }
+    ],
+    "eventsParticipated": [
+      {
+        "id": 3,
+        "activityName": "Mobile App Security Seminar",
+        "description": "Participated in a seminar on challenges in mobile app security.",
+        "date": "2023-03-20"
+      }
+    ],
+    "projects": [
+      {
+        "id": 4,
+        "activityName": "Machine Learning Research",
+        "description": "Contributed to a research project on recent advances in machine learning.",
+        "startDate": "2023-01-01",
+        "endDate": "2023-06-30"
+      }
+    ],
+    "specialAchievements": [
+      {
+        "id": 5,
+        "activityName": "Best Paper Award",
+        "description": "Received the Best Paper Award at a technology conference.",
+        "date": "2023-04-05"
+      }
+    ],
+    "extraCurricularActivities": [
+      {
+        "id": 6,
+        "activityName": "Community Service Event",
+        "description": "Participated in a community service event.",
+        "date": "2023-02-15"
+      }
+    ]
+  },
+  {
+    "studentPrn": "67890",
+    "eventsOrganized": [
+      {
+        "id": 7,
+        "activityName": "Network Security Symposium",
+        "description": "Organized a symposium on network security challenges.",
+        "date": "2023-07-12"
+      }
+    ],
+    "eventsParticipated": [
+      {
+        "id": 8,
+        "activityName": "Cloud Computing Summit",
+        "description": "Participated in a summit on cloud computing concepts.",
+        "date": "2023-08-25"
+      }
+    ],
+    "projects": [
+      {
+        "id": 9,
+        "activityName": "Software Engineering Project",
+        "description": "Worked on a software engineering project focusing on current trends.",
+        "startDate": "2023-04-01",
+        "endDate": "2023-09-30"
+      }
+    ],
+    "specialAchievements": [
+      {
+        "id": 10,
+        "activityName": "Innovation Award",
+        "description": "Received an innovation award for a software engineering solution.",
+        "date": "2023-06-10"
+      }
+    ],
+    "extraCurricularActivities": [
+      {
+        "id": 11,
+        "activityName": "Sports Tournament",
+        "description": "Participated in a university sports tournament.",
+        "date": "2023-03-10"
+      }
+    ]
+  },
+  {
+    "studentPrn": "54321",
+    "eventsOrganized": [
+      {
+        "id": 12,
+        "activityName": "Frontend Development Meetup",
+        "description": "Organized a meetup on best practices for frontend development.",
+        "date": "2023-09-18"
+      }
+    ],
+    "eventsParticipated": [
+      {
+        "id": 13,
+        "activityName": "Network Security Workshop",
+        "description": "Participated in a workshop on challenges in network security.",
+        "date": "2023-05-05"
+      }
+    ],
+    "projects": [
+      {
+        "id": 14,
+        "activityName": "Open Source Contribution",
+        "description": "Contributed to an open-source project.",
+        "startDate": "2023-02-01",
+        "endDate": "2023-07-31"
+      }
+    ],
+    "specialAchievements": [
+      {
+        "id": 15,
+        "activityName": "Excellence in Research Award",
+        "description": "Received an award for excellence in research.",
+        "date": "2023-08-12"
+      }
+    ],
+    "extraCurricularActivities": [
+      {
+        "id": 16,
+        "activityName": "Art and Culture Festival",
+        "description": "Participated in an art and culture festival.",
+        "date": "2023-11-05"
+      }
+    ]
+  },
+  {
+    "studentPrn": "98765",
+    "eventsOrganized": [
+      {
+        "id": 17,
+        "activityName": "Cloud Computing Webinar",
+        "description": "Organized a webinar on the introduction to cloud computing concepts.",
+        "date": "2023-12-01"
+      }
+    ],
+    "eventsParticipated": [
+      {
+        "id": 18,
+        "activityName": "Software Engineering Conference",
+        "description": "Participated in a conference on current trends in software engineering.",
+        "date": "2023-10-20"
+      }
+    ],
+    "projects": [
+      {
+        "id": 19,
+        "activityName": "Innovative Software Development",
+        "description": "Developed innovative software with a focus on user experience.",
+        "startDate": "2023-07-01",
+        "endDate": "2023-12-31"
+      }
+    ],
+    "specialAchievements": [
+      {
+        "id": 20,
+        "activityName": "Outstanding Contribution Award",
+        "description": "Received an award for outstanding contribution to the software development field.",
+        "date": "2023-11-15"
+      }
+    ],
+    "extraCurricularActivities": [
+      {
+        "id": 21,
+        "activityName": "Volunteering for Social Cause",
+        "description": "Volunteered for a social cause event.",
+        "date": "2023-09-08"
+      }
+    ]
+  }
+]

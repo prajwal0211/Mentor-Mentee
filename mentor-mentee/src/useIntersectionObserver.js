@@ -6,7 +6,7 @@ function useIntersectionObserver(handleIntersection) {
       new IntersectionObserver(handleIntersection, {
         root: null,
         rootMargin: "0px",
-        threshold: 0.7,
+        threshold: 1,
       }),
     [handleIntersection]
   );

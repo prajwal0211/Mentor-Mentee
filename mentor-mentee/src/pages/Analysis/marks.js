@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Dropdown, DropdownButton, Form } from "react-bootstrap";
+import { Dropdown, DropdownButton, Form, Image } from "react-bootstrap";
 
 function Marks() {
   const [examType, setExamType] = useState("");
@@ -21,6 +21,7 @@ function Marks() {
         "Average",
       ]);
       setSubjectOptions([
+        "All",
         "Internet Programming",
         "Advanced Data Structures and Algorithms",
         "Advanced Data Management Techniques",
@@ -33,6 +34,7 @@ function Marks() {
     } else if (selectedType === "Practical") {
       setExamOptions([]);
       setSubjectOptions([
+        "All",
         "Internet Programming Lab",
         "Security Lab",
         "DevOps Lab",
@@ -54,11 +56,27 @@ function Marks() {
     setSelectedSubject(selectedSubject);
   };
 
+  const renderBottomContent = () => {
+    if (examType && selectedExamOption && selectedSubject) {
+      // Values are selected, show image
+      return (
+        <Image
+          src="/linechart.png"
+          alt="Selected Image"
+          style={{ height: "200px", width: "350px" }}
+        />
+      );
+    } else {
+      // Values are not selected, show text
+      return <p>Please select exam type, exam option, and subject.</p>;
+    }
+  };
+
   return (
-    <div className="mx-4">
-      <Form className="d-flex">
-        {/* <Form.Group controlId="examTypeDropdown" className="me-5"> */}
-        <Form.Group className="me-5">
+    <div className="p-5">
+      <h3 className="mb-5 text-dark">Marks</h3>
+      <Form className="d-flex flex-column flex-md-row">
+        <Form.Group className="me-5 mb-3 mb-sm-4">
           <Form.Label>Select Exam Type</Form.Label>
           <DropdownButton
             title={examType || "Select Type"}
@@ -69,8 +87,7 @@ function Marks() {
           </DropdownButton>
         </Form.Group>
 
-        {/* <Form.Group controlId="examOptionsDropdown" className="me-5"> */}
-        <Form.Group className="me-5">
+        <Form.Group className="me-5 mb-3 mb-sm-4">
           <Form.Label>Select Exam Options</Form.Label>
           <DropdownButton
             title={
@@ -91,8 +108,7 @@ function Marks() {
           </DropdownButton>
         </Form.Group>
 
-        {/* <Form.Group controlId="subjectDropdown" className="me-5"> */}
-        <Form.Group className="me-5">
+        <Form.Group className="me-5 mb-3 mb-sm-4">
           <Form.Label>Select Subject</Form.Label>
           <DropdownButton
             title={
@@ -113,6 +129,7 @@ function Marks() {
           </DropdownButton>
         </Form.Group>
       </Form>
+      <div className="mt-3">{renderBottomContent()}</div>
     </div>
   );
 }

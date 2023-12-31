@@ -19,9 +19,9 @@ import MenteeDashboard from "./pages/DashBoard/MenteeDashboard.js";
 import SearchStudent from "./pages/PersonalDetails/MenteeDetails.js";
 import Career from "./pages/Career/Career.js";
 import Analysis from "./pages/Analysis/Analysis.js";
-import MyCenteredForm from "./CenteredForm";
-import AcademicsPage from "./AcademicsPage";
-import Sheet from "./Sheet";
+// import MyCenteredForm from "../src/pages/PersonalDetails/CenteredForm";
+// import AcademicsPage from "../src/pages/PersonalDetails/AcademicsPage";
+// import Sheet from "../src/pages/PersonalDetails/Sheet";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -39,7 +39,10 @@ root.render(
           <Route path="/mentee">
             <Route path="" element={<Layout />}>
               <Route index path="dashboard" element={<MenteeDashboard />} />
-              <Route path="details" element={<MenteeDetails />} />
+              <Route path="details" element={<SearchStudent />}>
+                {/* <Route path="academics" element={<AcademicsPage />} />
+                <Route path="sheet" element={<Sheet />} /> */}
+              </Route>
               <Route path="analysis" element={<Analysis />} />
               <Route path="career" element={<Career />} />
             </Route>

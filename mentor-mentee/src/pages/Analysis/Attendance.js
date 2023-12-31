@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Dropdown, DropdownButton, Form } from "react-bootstrap";
+import { Dropdown, DropdownButton, Form, Image } from "react-bootstrap";
 
 function Attendance() {
   const [attendanceType, setAttendanceType] = useState("");
@@ -8,7 +8,6 @@ function Attendance() {
   const [isSubjectOptionsDisabled, setSubjectOptionsDisabled] = useState(true);
 
   const handleExamTypeChange = (selectedType) => {
-    console.log(selectedType);
     setAttendanceType(selectedType);
 
     if (selectedType === "Theory") {
@@ -34,15 +33,28 @@ function Attendance() {
   };
 
   const handleSubjectChange = (selectedSubject) => {
-    console.log(selectedSubject);
     setSelectedSubject(selectedSubject);
   };
 
+  const renderBottomContent = () => {
+    if (attendanceType && selectedSubject) {
+      return (
+        <Image
+          src="/piechart.png"
+          alt="Selected Image"
+          style={{ width: "200px", height: "200px" }}
+        />
+      );
+    } else {
+      return <p>Please select attendance type and subject.</p>;
+    }
+  };
+
   return (
-    <div className="mx-4">
-      <Form className="d-flex">
-        {/* <Form.Group htmlFor="attendanceTypeDropdown" className="me-5"> */}
-        <Form.Group htmlFor="attendanceTypeDropdown" className="me-5">
+    <div className="p-5">
+      <h3 className="mb-5 text-dark">Attendance</h3>
+      <Form className="d-flex flex-column flex-md-row">
+        <Form.Group className="me-5 mb-3 mb-sm-4">
           <Form.Label>Select Attendance Type</Form.Label>
           <DropdownButton
             title={attendanceType || "Select Type"}
@@ -52,8 +64,7 @@ function Attendance() {
             <Dropdown.Item eventKey="Practical">Practical</Dropdown.Item>
           </DropdownButton>
         </Form.Group>
-        {/* <Form.Group controlId="subjectDropdown" className="me-5"> */}
-        <Form.Group className="me-5">
+        <Form.Group className="me-5 mb-3 mb-sm-4">
           <Form.Label>Select Subject</Form.Label>
           <DropdownButton
             title={
@@ -74,6 +85,7 @@ function Attendance() {
           </DropdownButton>
         </Form.Group>
       </Form>
+      <div className="mt-3">{renderBottomContent()}</div>
     </div>
   );
 }

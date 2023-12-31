@@ -99,23 +99,30 @@ function Courses({ studentPrn, userType }) {
 
   return (
     <div style={{ position: "relative" }}>
-      {userType === "mentee" && (
-        <Button
-          variant="outline-dark"
-          size="sm"
-          style={{
-            position: "absolute",
-            right: "7px",
-            zIndex: 1,
-          }}
-          onClick={handleShowModal}
-        >
-          <AddOutlinedIcon />
-        </Button>
-      )}
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div className="d-flex pt-5 ps-5">
+        <h3 className="mb-3 text-dark">Courses</h3>
+        {userType === "mentee" && (
+          <Button
+            variant="outline-dark"
+            size="sm"
+            style={{
+              position: "absolute",
+              right: "20px",
+              zIndex: 1,
+            }}
+            onClick={handleShowModal}
+          >
+            <AddOutlinedIcon />
+          </Button>
+        )}
+      </div>
+      <div style={{ display: "flex", flexWrap: "wrap" }} className="p-5">
         {courseData.map((course) => (
-          <Card key={course.id} style={{ width: "20rem", margin: "10px" }}>
+          <Card
+            key={course.id}
+            style={{ width: "22rem" }}
+            className="p-3 me-lg-3 me-sm-3 mb-3"
+          >
             <Card.Body>
               <Card.Title>{course.courseName}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">

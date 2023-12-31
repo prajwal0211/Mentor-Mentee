@@ -3,56 +3,96 @@
     "id": 1,
     "topicName": "Web Development Trends",
     "authorName": "John Doe",
-    "documentUrl": "https://example.com/web-development-trends",
+    "description": "Exploring the latest trends in web development.",
+    "documentContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "file": {
+      "type": "pdf",
+      "name": "web_dev_trends.pdf"
+    },
     "studentPrn": "12345"
   },
   {
     "id": 2,
     "topicName": "Data Science in Practice",
     "authorName": "Jane Smith",
-    "documentUrl": "https://example.com/data-science-in-practice",
+    "description": "Practical applications of data science techniques.",
+    "documentContent": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+    "file": {
+      "type": "docx",
+      "name": "data_science_practice.docx"
+    },
     "studentPrn": "12345"
   },
   {
     "id": 3,
     "topicName": "Mobile App Security",
     "authorName": "Alan Johnson",
-    "documentUrl": "https://example.com/mobile-app-security",
+    "description": "Challenges and solutions in mobile app security.",
+    "documentContent": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...",
+    "file": {
+      "type": "pdf",
+      "name": "mobile_app_security.pdf"
+    },
     "studentPrn": "67890"
   },
   {
     "id": 4,
     "topicName": "Advances in Machine Learning",
     "authorName": "Emma White",
-    "documentUrl": "https://example.com/advances-in-machine-learning",
+    "description": "Recent advances and trends in machine learning.",
+    "documentContent": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum...",
+    "file": {
+      "type": "pdf",
+      "name": "advances_in_ml.pdf"
+    },
     "studentPrn": "67890"
   },
   {
     "id": 5,
     "topicName": "Frontend Development Best Practices",
     "authorName": "Chris Brown",
-    "documentUrl": "https://example.com/frontend-development-best-practices",
+    "description": "Best practices for developing modern frontend applications.",
+    "documentContent": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia...",
+    "file": {
+      "type": "docx",
+      "name": "frontend_best_practices.docx"
+    },
     "studentPrn": "54321"
   },
   {
     "id": 6,
     "topicName": "Network Security Challenges",
     "authorName": "Sophia Miller",
-    "documentUrl": "https://example.com/network-security-challenges",
+    "description": "Exploring challenges in network security.",
+    "documentContent": "Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure...",
+    "file": {
+      "type": "pdf",
+      "name": "network_security_challenges.pdf"
+    },
     "studentPrn": "54321"
   },
   {
     "id": 7,
     "topicName": "Introduction to Cloud Computing",
     "authorName": "Ryan Wilson",
-    "documentUrl": "https://example.com/introduction-to-cloud-computing",
+    "description": "An introduction to the concepts of cloud computing.",
+    "documentContent": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis...",
+    "file": {
+      "type": "pdf",
+      "name": "intro_to_cloud_computing.pdf"
+    },
     "studentPrn": "98765"
   },
   {
     "id": 8,
     "topicName": "Software Engineering Trends",
     "authorName": "Olivia Davis",
-    "documentUrl": "https://example.com/software-engineering-trends",
+    "description": "Current trends in software engineering practices.",
+    "documentContent": "Soluta nobis est eligendi optio cumque nihil impedit quo minus id quod...",
+    "file": {
+      "type": "docx",
+      "name": "software_engineering_trends.docx"
+    },
     "studentPrn": "98765"
   }
 ]
