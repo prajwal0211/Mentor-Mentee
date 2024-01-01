@@ -54,7 +54,10 @@ const MenteeView = ({ studentData }) => {
       {studentData && (
         <>
           <div ref={engagementRef} id="engagement-activities">
-            <EngagementActivities studentPrn={studentData.prnNumber} />
+            <EngagementActivities
+              studentPrn={studentData.prnNumber}
+              userType="mentee"
+            />
           </div>
           <hr />
           <div ref={attendanceRef} id="attendance">

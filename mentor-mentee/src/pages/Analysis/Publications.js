@@ -202,7 +202,7 @@ function Publications({ studentPrn, userType }) {
           <Card
             key={publication.id}
             style={{ width: "22rem" }}
-            className="p-3 me-lg-3 mb-3 me-sm-3"
+            className="p-3 me-lg-3 mb-3"
           >
             <Card.Body>
               <Card.Title>{publication.topicName}</Card.Title>

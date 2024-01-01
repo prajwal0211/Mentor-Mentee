@@ -121,7 +121,7 @@ function Courses({ studentPrn, userType }) {
           <Card
             key={course.id}
             style={{ width: "22rem" }}
-            className="p-3 me-lg-3 me-sm-3 mb-3"
+            className="p-3 me-lg-3 mb-3"
           >
             <Card.Body>
               <Card.Title>{course.courseName}</Card.Title>
