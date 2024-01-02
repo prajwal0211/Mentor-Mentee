@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { Container, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Outlet, useRoutes } from "react-router-dom";
+import Sheet from "./Sheet";
 // import {Row, Col, Form, Button } from 'react-bootstrap';
 
 const AcademicsPage = () => {
+  const hasChildRoutes = useRoutes([
+    { path: "marksheet/*", element: <Sheet /> },
+  ]);
+
   const [data, setData] = useState({
     ssc: { percentage: "", medium: "", board: "" },
     hsc: { percentage: "", medium: "", board: "" },
@@ -82,189 +88,223 @@ const AcademicsPage = () => {
     marginRight: "10px",
     marginBottom: "5px",
   };
+  if (!hasChildRoutes) {
+    return (
+      <div className="custom-background p-4">
+        <div>
+          {/* <div className="d-flex justify-content-center align-items-center"> */}
+          {/* <div
+          className="position-relative"
+          style={{ width: "80%", minWidth: "300px", maxWidth: "1000px" }}
+        > */}
+          <Container
+            fluid
+            // className="position-absolute top-0 start-50 translate-middle"
+            // style={{
+            //   width: "1230px",
+            //   height: "755px",
+            //   background: `linear-gradient(180deg, rgba(0, 0, 255, 0.67) 0%, rgba(2, 8, 16, 0) calc(100% - 300px))`,
+            //   borderRadius: "5px",
+            // }}
+          >
+            <h4>Academics</h4>
 
-  return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
-      <div
-        className="position-relative"
-        style={{ width: "80%", minWidth: "300px", maxWidth: "1000px" }}
-      >
-        <Container
-          fluid
-          className="position-absolute top-0 start-50 translate-middle"
-          style={{
-            width: "1230px",
-            height: "755px",
-            background: `linear-gradient(180deg, rgba(0, 0, 255, 0.67) 0%, rgba(2, 8, 16, 0) calc(100% - 300px))`,
-            borderRadius: "5px",
-          }}
-        >
-          <h4 style={h4Style}>Academics</h4>
-          <div className="position-absolute top-0 start-0 m-3">
-            <img
-              src="abc.jpg"
-              alt="Profile"
-              style={{
-                width: "100px",
-                marginBottom: "20px",
-                height: "100px",
-                borderRadius: "50%",
-                objectFit: "cover",
-              }}
-            />
-          </div>
+            {/* <h4 style={h4Style}>Academics</h4> */}
+            <div className="m-3">
+              {/* position-absolute top-0 start-0  */}
+              <img
+                src="/abc.jpg"
+                alt="Profile"
+                style={{
+                  width: "100px",
+                  marginBottom: "20px",
+                  height: "100px",
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
 
-          <Table striped bordered hover className="mt-3" style={tableStyle1}>
-            <thead>
-              <tr>
-                <th style={headerCellStyle1}> </th>
-                <th style={headerCellStyle1}>
-                  <b>Percentage</b>
-                </th>
-                <th style={headerCellStyle1}>
-                  <b>Medium</b>
-                </th>
-                <th style={headerCellStyle1}>
-                  <b>Board</b>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th style={headerCellStyle1}>
-                  <b>S.S.C</b>
-                </th>
-                <td style={dataCellStyle}>
-                  <input
-                    type="text"
-                    value={data.ssc.percentage}
-                    onChange={(e) => handleChange(e, "ssc", "percentage")}
-                  />
-                </td>
-                <td style={dataCellStyle}>
-                  <input
-                    type="text"
-                    value={data.ssc.medium}
-                    onChange={(e) => handleChange(e, "ssc", "medium")}
-                  />
-                </td>
-                <td style={dataCellStyle}>
-                  <input
-                    type="text"
-                    value={data.ssc.board}
-                    onChange={(e) => handleChange(e, "ssc", "board")}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <th style={headerCellStyle1}>
-                  <b>H.S.C</b>
-                </th>
-                <td style={dataCellStyle}>
-                  <input
-                    type="text"
-                    value={data.hsc.percentage}
-                    onChange={(e) => handleChange(e, "hsc", "percentage")}
-                  />
-                </td>
-                <td style={dataCellStyle}>
-                  <input
-                    type="text"
-                    value={data.hsc.medium}
-                    onChange={(e) => handleChange(e, "hsc", "medium")}
-                  />
-                </td>
-                <td style={dataCellStyle}>
-                  <input
-                    type="text"
-                    value={data.hsc.board}
-                    onChange={(e) => handleChange(e, "hsc", "board")}
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </Table>
-          <br></br>
+            <Table striped bordered hover className="mt-3" style={tableStyle1}>
+              <thead>
+                <tr>
+                  <th style={headerCellStyle1}> </th>
+                  <th style={headerCellStyle1}>
+                    <b>Percentage</b>
+                  </th>
+                  <th style={headerCellStyle1}>
+                    <b>Medium</b>
+                  </th>
+                  <th style={headerCellStyle1}>
+                    <b>Board</b>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th style={headerCellStyle1}>
+                    <b>S.S.C</b>
+                  </th>
+                  <td style={dataCellStyle}>
+                    <input
+                      type="text"
+                      value={data.ssc.percentage}
+                      onChange={(e) => handleChange(e, "ssc", "percentage")}
+                    />
+                  </td>
+                  <td style={dataCellStyle}>
+                    <input
+                      type="text"
+                      value={data.ssc.medium}
+                      onChange={(e) => handleChange(e, "ssc", "medium")}
+                    />
+                  </td>
+                  <td style={dataCellStyle}>
+                    <input
+                      type="text"
+                      value={data.ssc.board}
+                      onChange={(e) => handleChange(e, "ssc", "board")}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th style={headerCellStyle1}>
+                    <b>H.S.C</b>
+                  </th>
+                  <td style={dataCellStyle}>
+                    <input
+                      type="text"
+                      value={data.hsc.percentage}
+                      onChange={(e) => handleChange(e, "hsc", "percentage")}
+                    />
+                  </td>
+                  <td style={dataCellStyle}>
+                    <input
+                      type="text"
+                      value={data.hsc.medium}
+                      onChange={(e) => handleChange(e, "hsc", "medium")}
+                    />
+                  </td>
+                  <td style={dataCellStyle}>
+                    <input
+                      type="text"
+                      value={data.hsc.board}
+                      onChange={(e) => handleChange(e, "hsc", "board")}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
+            <br></br>
 
-          <Table striped bordered hover className="mt-5" style={tableStyle2}>
-            <thead>
-              <tr>
-                <th style={headerCellStyle2}>
-                  <b></b>
-                </th>
-                <th style={headerCellStyle2}>
-                  <b>CET/AIEEE</b>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th style={headerCellStyle2}>
-                  <b>Score</b>
-                </th>
-                <td style={dataCellStyle}>
-                  <input
-                    type="text"
-                    value={data.cet.score}
-                    onChange={(e) => handleChange(e, "cet", "score")}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <th style={headerCellStyle2}>
-                  <b>Rank</b>
-                </th>
-                <td style={dataCellStyle}>
-                  <input
-                    type="text"
-                    value={data.cet.rank}
-                    onChange={(e) => handleChange(e, "cet", "rank")}
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </Table>
-          <br></br>
-          <div>
-            <span style={labelStyle}>FE</span>
-            <span style={labelStyle}>SE</span>
-            <span style={labelStyle}>TE</span>
-            <span style={labelStyle}>BE</span>
-          </div>
-          <br></br>
-          <div>
-            <Link to="/sheet" style={{ ...linkStyle, margin: "50px 60px" }}>
-              <button>Sem 1</button>
-            </Link>
-            <Link to="/sheet" style={{ ...linkStyle, margin: "23px 33px" }}>
-              <button>Sem 3</button>
-            </Link>
-            <Link to="/sheet" style={{ ...linkStyle, margin: "48px 58px" }}>
-              <button>Sem 5</button>
-            </Link>
-            <Link to="/sheet" style={{ ...linkStyle, margin: "23px 33px" }}>
-              <button>Sem 7</button>
-            </Link>
-          </div>
-          <br></br>
-          <div>
-            <Link to="/sheet" style={{ ...linkStyle, margin: "50px 60px" }}>
-              <button>Sem 2</button>
-            </Link>
-            <Link to="/sheet" style={{ ...linkStyle, margin: "23px 33px" }}>
-              <button>Sem 4</button>
-            </Link>
-            <Link to="/sheet" style={{ ...linkStyle, margin: "48px 58px" }}>
-              <button>Sem 6</button>
-            </Link>
-            <Link to="/sheet" style={{ ...linkStyle, margin: "23px 33px" }}>
-              <button>Sem 8</button>
-            </Link>
-          </div>
-        </Container>
+            <Table striped bordered hover className="mt-5" style={tableStyle2}>
+              <thead>
+                <tr>
+                  <th style={headerCellStyle2}>
+                    <b></b>
+                  </th>
+                  <th style={headerCellStyle2}>
+                    <b>CET/AIEEE</b>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th style={headerCellStyle2}>
+                    <b>Score</b>
+                  </th>
+                  <td style={dataCellStyle}>
+                    <input
+                      type="text"
+                      value={data.cet.score}
+                      onChange={(e) => handleChange(e, "cet", "score")}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th style={headerCellStyle2}>
+                    <b>Rank</b>
+                  </th>
+                  <td style={dataCellStyle}>
+                    <input
+                      type="text"
+                      value={data.cet.rank}
+                      onChange={(e) => handleChange(e, "cet", "rank")}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
+            <br></br>
+            <div>
+              <span style={labelStyle}>FE</span>
+              <span style={labelStyle}>SE</span>
+              <span style={labelStyle}>TE</span>
+              <span style={labelStyle}>BE</span>
+            </div>
+            <br></br>
+            <div>
+              <Link
+                to="marksheet"
+                style={{ ...linkStyle, margin: "50px 60px" }}
+              >
+                <button>Sem 1</button>
+              </Link>
+              <Link
+                to="marksheet"
+                style={{ ...linkStyle, margin: "23px 33px" }}
+              >
+                <button>Sem 3</button>
+              </Link>
+              <Link
+                to="marksheet"
+                style={{ ...linkStyle, margin: "48px 58px" }}
+              >
+                <button>Sem 5</button>
+              </Link>
+              <Link
+                to="marksheet"
+                style={{ ...linkStyle, margin: "23px 33px" }}
+              >
+                <button>Sem 7</button>
+              </Link>
+            </div>
+            <br></br>
+            <div>
+              <Link
+                to="marksheet"
+                style={{ ...linkStyle, margin: "50px 60px" }}
+              >
+                <button>Sem 2</button>
+              </Link>
+              <Link
+                to="marksheet"
+                style={{ ...linkStyle, margin: "23px 33px" }}
+              >
+                <button>Sem 4</button>
+              </Link>
+              <Link
+                to="marksheet"
+                style={{ ...linkStyle, margin: "48px 58px" }}
+              >
+                <button>Sem 6</button>
+              </Link>
+              <Link
+                to="marksheet"
+                style={{ ...linkStyle, margin: "23px 33px" }}
+              >
+                <button>Sem 8</button>
+              </Link>
+            </div>
+          </Container>
+        </div>
+        <div>
+          <Outlet />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+  return <Outlet />;
 };
 
 export default AcademicsPage;

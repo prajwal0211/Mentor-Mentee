@@ -22,4 +22,8 @@ $danger: red;
 $light: white;
 $dark: #192042;
 
+.custom-background {
+  background: linear-gradient(180deg, #b1e4f6 15%, #d8f8f4 calc(100% - 0px));
+}
+
 @import "bootstrap/scss/bootstrap";

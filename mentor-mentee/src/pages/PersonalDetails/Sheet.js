@@ -51,26 +51,30 @@ const Sheet = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
-      <div
+    <div className="custom-background p-4">
+      <div>
+        {/* <div className="d-flex justify-content-center align-items-center vh-100">
+       <div
         className="position-relative"
-        style={{ width: "80%", minWidth: "300px", maxWidth: "1000px" }}
-      >
+         style={{ width: "80%", minWidth: "300px", maxWidth: "1000px" }}
+       > */}
         <Container
           fluid
-          className="position-absolute top-0 start-50 translate-middle"
-          style={{
-            width: "1230px",
-            height: "755px",
-            background: `linear-gradient(180deg, rgba(0, 0, 255, 0.67) 0%, rgba(2, 8, 16, 0) calc(100% - 300px))`,
-            borderRadius: "5px",
-          }}
+          // className="position-absolute top-0 start-50 translate-middle"
+          // style={{
+          //   width: "1230px",
+          //   height: "755px",
+          //   background: `linear-gradient(180deg, rgba(0, 0, 255, 0.67) 0%, rgba(2, 8, 16, 0) calc(100% - 300px))`,
+          //   borderRadius: "5px",
+          // }}
         >
           <div>
-            <h4 style={h4Style}>Academics</h4>
-            <div className="position-absolute top-0 start-0 m-3">
+            <h4>Academics</h4>
+            {/* <h4 style={h4Style}>Academics</h4> */}
+            <div className="m-3">
+              {/* <div className="position-absolute top-0 start-0 m-3"> */}
               <img
-                src="abc.jpg"
+                src="/abc.jpg"
                 alt="Profile"
                 style={{
                   width: "100px",

@@ -163,6 +163,7 @@
 import React, { useState, useEffect } from "react";
 import MentorView from "./MentorView";
 import MenteeView from "./MenteeView";
+import { Container } from "react-bootstrap";
 
 function Analysis() {
   const [searchInput, setSearchInput] = useState("");
@@ -213,17 +214,19 @@ function Analysis() {
   }, [searchInput, originalStudentData, userRole]);
 
   return (
-    <div className="bg-secondary">
-      {userRole === "mentor" && !studentData && (
-        <h3 className="text-center text-dark pt-4">
-          Search Student Data for their Data Analysis
-        </h3>
-      )}
-      {userRole === "mentor" ? (
-        <MentorView studentData={studentData} onSearch={onSearch} />
-      ) : (
-        <MenteeView studentData={studentData} />
-      )}
+    <div>
+      <Container fluid className="custom-background">
+        {userRole === "mentor" && !studentData && (
+          <h3 className="text-center text-dark pt-4">
+            Search Student Data for their Data Analysis
+          </h3>
+        )}
+        {userRole === "mentor" ? (
+          <MentorView studentData={studentData} onSearch={onSearch} />
+        ) : (
+          <MenteeView studentData={studentData} />
+        )}
+      </Container>
     </div>
   );
 }

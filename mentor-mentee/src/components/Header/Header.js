@@ -48,14 +48,32 @@ function Header() {
               </Nav.Link>
               <Nav.Link
                 as={NavLink}
-                to="details"
+                to={
+                  location.pathname.startsWith("/mentor")
+                    ? "search-details"
+                    : "studentdetails"
+                }
                 className={`${
-                  isActive(location.pathname, "/details")
+                  isActive(
+                    location.pathname,
+                    location.pathname.startsWith("/mentor")
+                      ? "/search-details"
+                      : "/studentdetails"
+                  )
                     ? "text-info"
                     : "text-secondary "
                 }`}
               >
-                Personal Details
+                {location.pathname.startsWith("/mentor")
+                  ? "Mentee Details"
+                  : "Personal Details"}
+                {/*    className={`${
+                 isActive(location.pathname, "/search-details")
+                     ? "text-info"
+                     : "text-secondary "
+                 }`}
+               >
+                 Personal Details */}
               </Nav.Link>
               <AnalysisDropdwon />
               <Nav.Link

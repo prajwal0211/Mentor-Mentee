@@ -169,7 +169,7 @@ function EngagementActivities({ studentPrn, userType }) {
                 <ExpandMoreIcon />
               )}
             </h6>
-            {userType === "mentee" && (
+            {userType === "mentee" && sectionIndex >= 2 && (
               <Button
                 variant="outline-dark"
                 size="sm"
@@ -197,7 +197,7 @@ function EngagementActivities({ studentPrn, userType }) {
                         <Card.Title>{activity.activityName}</Card.Title>
                         <Card.Text>{activity.description}</Card.Text>
                         <Card.Text>Date: {activity.date}</Card.Text>
-                        {userType === "mentee" && (
+                        {userType === "mentee" && sectionIndex >= 2 && (
                           <Button
                             variant="outline-warning"
                             size="sm"
