@@ -22,6 +22,9 @@ import Analysis from "./pages/Analysis/Analysis.js";
 import MyCenteredForm from "./pages/PersonalDetails/CenteredForm";
 import AcademicsPage from "./pages/PersonalDetails/AcademicsPage";
 import Sheet from "./pages/PersonalDetails/Sheet";
+import JobRecord from "./pages/Career/JobRecord.js";
+import LOR from "./pages/Career/LOR.js";
+import Universities from "./pages/Career/Universities.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -53,6 +56,9 @@ root.render(
               </Route>
               <Route path="analysis" element={<Analysis />} />
               <Route path="career" element={<Career />} />
+              <Route path="LOR" element={<LOR />} />
+              <Route path="Universities" element={<Universities />} />
+              <Route path="JobRecord" element={<JobRecord />} />
             </Route>
           </Route>
         </Routes>
