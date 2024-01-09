@@ -186,11 +186,11 @@ function EngagementActivities({ studentPrn, userType }) {
           </div>
           <Collapse in={openSection === sectionIndex}>
             <div>
-              <Row xs={1} md={4}>
+              <Row style={{ display: "flex", flexWrap: "wrap" }}>
                 {section.activities.map((activity, index) => (
-                  <Col key={index}>
+                  <Col key={index} style={{ flex: "0" }}>
                     <Card
-                      style={{ width: "17rem", height: "14rem" }}
+                      style={{ width: "16rem", height: "14rem" }}
                       className="p-3 mb-3"
                     >
                       <Card.Body>
