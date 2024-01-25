@@ -1,9 +1,10 @@
 import React from "react";
+import Middle from "./middleContainer/middle";
 
 function MenteeDashboard() {
   return (
     <div>
-      <h2>Mentee Dashboard</h2>
+      <Middle />
     </div>
   );
 }

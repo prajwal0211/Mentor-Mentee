@@ -1,0 +1,43 @@
+.middle {
+  background-color: #192042;
+  color: white;
+  border-top-right-radius: 60px;
+  border-top-left-radius: 60px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.middle .cardImg {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.middle .cardImg img {
+  width: 100%;
+  height: auto;
+  border-radius: 20%;
+}
+
+.middle span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.middle span p {
+  text-align: left;
+  padding: 10px;
+}
+
+.lineGraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donutGraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -23,6 +23,70 @@ function EngagementActivities({ studentPrn, userType }) {
     date: "",
   });
 
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch("/engagementActivities.json");
+  //       const data = await response.json();
+  //       const filteredData = data.find(
+  //         (activity) => activity.studentPrn === studentPrn
+  //       );
+
+  //       if (filteredData) {
+  //         const {
+  //           eventsOrganized,
+  //           eventsParticipated,
+  //           projects,
+  //           specialAchievements,
+  //           extraCurricularActivities,
+  //         } = filteredData;
+
+  //         const organizedSection = {
+  //           title: "Events Organized",
+  //           activities: eventsOrganized,
+  //         };
+
+  //         const participatedSection = {
+  //           title: "Events Participated",
+  //           activities: eventsParticipated,
+  //         };
+
+  //         const projectsSection = {
+  //           title: "Projects",
+  //           activities: projects,
+  //         };
+
+  //         const achievementsSection = {
+  //           title: "Special Achievements",
+  //           activities: specialAchievements,
+  //         };
+
+  //         const extraCurricularSection = {
+  //           title: "Extra-Curricular Activities",
+  //           activities: extraCurricularActivities,
+  //         };
+
+  //         const engagementSections = [
+  //           organizedSection,
+  //           participatedSection,
+  //           projectsSection,
+  //           achievementsSection,
+  //           extraCurricularSection,
+  //         ];
+
+  //         setEngagementData(engagementSections);
+  //       } else {
+  //         setEngagementData([]);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching engagement activities data:", error);
+  //     }
+  //   };
+
+  //   fetchData();
+  //   console.log(engagementData);
+  // }, [studentPrn]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -33,46 +97,26 @@ function EngagementActivities({ studentPrn, userType }) {
         );
 
         if (filteredData) {
-          const {
-            eventsOrganized,
-            eventsParticipated,
-            projects,
-            specialAchievements,
-            extraCurricularActivities,
-          } = filteredData;
+          const updatedData = Object.keys(filteredData).reduce((acc, key) => {
+            if (Array.isArray(filteredData[key])) {
+              acc[key] = filteredData[key].map((item, index) => ({
+                ...item,
+                id: index,
+              }));
+            }
 
-          const organizedSection = {
-            title: "Events Organized",
-            activities: eventsOrganized,
-          };
+            return acc;
+          }, {});
 
-          const participatedSection = {
-            title: "Events Participated",
-            activities: eventsParticipated,
-          };
+          const engagementSections = Object.keys(updatedData).map((key) => ({
+            title: key.charAt(0).toUpperCase() + key.slice(1),
+            activities: updatedData[key],
+          }));
 
-          const projectsSection = {
-            title: "Projects",
-            activities: projects,
-          };
-
-          const achievementsSection = {
-            title: "Special Achievements",
-            activities: specialAchievements,
-          };
-
-          const extraCurricularSection = {
-            title: "Extra-Curricular Activities",
-            activities: extraCurricularActivities,
-          };
-
-          const engagementSections = [
-            organizedSection,
-            participatedSection,
-            projectsSection,
-            achievementsSection,
-            extraCurricularSection,
-          ];
+          // const engagementSections = Object.keys(updatedData).map((key) => ({
+          //   title: key.charAt(0).toUpperCase() + key.slice(1),
+          //   activities: Array.isArray(updatedData[key]) ? updatedData[key] : [],
+          // }));
 
           setEngagementData(engagementSections);
         } else {
@@ -137,6 +181,16 @@ function EngagementActivities({ studentPrn, userType }) {
   };
 
   const handleEditActivity = () => {
+    const indexToEdit = engagementData[selectedSection].activities.findIndex(
+      (activity) => activity.id === selectedActivity.id
+    );
+
+    if (indexToEdit !== -1) {
+      console.log("Index of selected activity:", indexToEdit);
+      console.log("ID of selected activity:", selectedActivity.id);
+    } else {
+      console.error("Selected activity not found.");
+    }
     const updatedActivities = engagementData[selectedSection].activities.map(
       (activity, index) =>
         index === selectedActivity.id ? { ...selectedActivity } : activity

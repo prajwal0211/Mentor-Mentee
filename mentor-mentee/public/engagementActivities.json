@@ -17,7 +17,7 @@
     ],
     "eventsParticipated": [
       {
-        "id": 3,
+        "id": 1,
         "activityName": "Mobile App Security Seminar",
         "description": "Participated in a seminar on challenges in mobile app security.",
         "date": "2023-03-20"
@@ -25,7 +25,7 @@
     ],
     "projects": [
       {
-        "id": 4,
+        "id": 1,
         "activityName": "Machine Learning Research",
         "description": "Contributed to a research project on recent advances in machine learning.",
         "startDate": "2023-01-01",
@@ -34,7 +34,7 @@
     ],
     "specialAchievements": [
       {
-        "id": 5,
+        "id": 1,
         "activityName": "Best Paper Award",
         "description": "Received the Best Paper Award at a technology conference.",
         "date": "2023-04-05"
@@ -42,7 +42,7 @@
     ],
     "extraCurricularActivities": [
       {
-        "id": 6,
+        "id": 1,
         "activityName": "Community Service Event",
         "description": "Participated in a community service event.",
         "date": "2023-02-15"
